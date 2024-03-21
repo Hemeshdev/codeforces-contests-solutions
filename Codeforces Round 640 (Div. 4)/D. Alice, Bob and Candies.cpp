@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long 
@@ -15,7 +16,6 @@ int main()
         ls.push_back(temp);
       }
       int alice =0;
-      int bob =0;
       int tot =0;
       int maxi = 0;
       int i=0;
@@ -24,7 +24,7 @@ int main()
       while(i<=j){
         if(flag){
           int sum =0;
-          while(sum<=maxi){
+          while(sum<=maxi && i<=j){
             sum+=ls[i];
             i++;
           }
@@ -32,9 +32,9 @@ int main()
           tot++;
           maxi = sum;
           flag = !flag;
-        }else if(!flag){
+        }else if(!flag ){
           int sum = 0;
-          while(sum<=maxi){
+          while(sum<=maxi && i<=j){
             sum+=ls[j];
             j--;
           }
